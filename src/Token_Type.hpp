@@ -1,0 +1,45 @@
+#pragma once
+
+#include <string_view>
+
+enum Token_Type
+{
+    // Symbol tokens
+    T_HAT, T_HAT_HAT, T_HAT_EQUAL,
+    T_TILDE,
+    T_LESS, T_LESS_LESS, T_LESS_LESS_EQUAL, T_LESS_EQUAL,
+    T_EQUAL, T_EQUAL_EQUAL, T_EQUAL_GREAT,
+    T_GREAT, T_GREAT_EQUAL, T_GREAT_GREAT, T_GREAT_GREAT_EQUAL,
+    T_PIPE, T_PIPE_EQUAL, T_PIPE_PIPE,
+    T_DASH, T_DASH_EQUAL, T_DASH_GREAT, T_DASH_DASH,
+    T_COMMA, T_SEMICOLON,
+    T_COLON, T_COLON_COLON,
+    T_EXCLAM, T_EXCLAM_EQUAL, T_EXCLAM_EXCLAM,
+    T_QUEST, T_QUEST_QUEST,
+    T_SLASH, T_SLASH_EQUAL,
+    T_DOT, T_DOT_DOT,
+    T_LEFT_PAREN, T_RIGHT_PAREN,
+    T_LEFT_SQUARE, T_DBL_SQUARE, T_RIGHT_SQUARE,
+    T_LEFT_BRACE, T_RIGHT_BRACE,
+    T_STAR, T_STAR_EQUAL,
+    T_AMP, T_AMP_EQUAL, T_AMP_AMP,
+    T_HASH,
+    T_PERC, T_PERC_EQUAL,
+    T_PLUS, T_PLUS_EQUAL, T_PLUS_PLUS,
+
+    // Literals
+    T_IDENT, T_STRING, T_INT, T_FLOAT,
+
+    // Keyword tokens
+    T_K_BOOL, T_K_BREAK, T_K_CASE, T_K_CLASS, T_K_CONST, T_K_CONTINUE,
+    T_K_DO, T_K_ELSE, T_K_ENUM, T_K_FALSE, T_K_FLOAT, T_K_FN, T_K_FOR, T_K_IF,
+    T_K_INT, T_K_LET, T_K_MUT, T_K_NULL, T_K_RETURN, T_K_SELF, T_K_STRING,
+    T_K_STRUCT, T_K_SUPER, T_K_SWITCH, T_K_THIS, T_K_TRUE, T_K_UNTIL,
+    T_K_VOID, T_K_WHILE,
+
+    T_EOF
+};
+
+const char* token_name(Token_Type t);
+
+Token_Type keyword_type(std::string_view word);

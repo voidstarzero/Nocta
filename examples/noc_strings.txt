@@ -1,0 +1,7 @@
+"this is a test string";
+
+"this is another test string";
+
+let txt =   "the intent behind unclosed string allowances is
+            "to allow multiline strings to be wrapped nicely without
+            "adding that whitespace to the string"

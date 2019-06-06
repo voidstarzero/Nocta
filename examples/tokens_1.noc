@@ -1,0 +1,30 @@
+import std::io;
+
+fn divis (n: int, div: int) -> bool;
+
+fn main -> int
+{
+    let n: int;
+    let is_prime = true;
+
+    io::print("Enter a positive integer: ");
+    io::read(n);
+
+    for (let i = 2; i <= n / 2; ++i) {
+        if (n % i == 0) {
+            is_prime = false;
+            break;
+        }
+    }
+
+    if (is_prime) {
+        io::print("This is a prime number");
+    }
+    else {
+        io::print("This is not a prime number");
+    }
+
+    return 0;
+}
+
+fn divis (n: int, div: int) -> bool => n % i == 0;
